@@ -32,12 +32,12 @@
                 stringKey = stringKey.charAt(0)+stringKey.charAt(2);
             }
 
-            return _this[stringKey];
+            return _this.baseColors[stringKey];
         },
 
         getColorFromString: function(string) {
             _this = this;
-            color = _this.transformTextToColor(string);
+            return '#' + _this.transformTextToColor(string);
         }
 
         display: function(string) {
