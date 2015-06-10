@@ -1,5 +1,7 @@
 # Letter Colored Avatar
 Display first letter on color like Gmail do. Basic script to do quickly the job.
+![capture d ecran 2015-06-10 23 42 27](https://cloud.githubusercontent.com/assets/1017746/8094968/b44b4fe0-0fca-11e5-83e8-ee7fbbaaa158.png)
+
 
 ## Usage
 Basic usage of the script:
