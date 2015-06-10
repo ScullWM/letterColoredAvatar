@@ -45,6 +45,12 @@
 
             color = _this.getColorFromString(string);
             firstLetter = string.charAt(0);
+
+            output                = [];
+            output['color']       = color;
+            output['firstLetter'] = firstLetter;
+
+            return output;
         },
 
         init: function(params) {
