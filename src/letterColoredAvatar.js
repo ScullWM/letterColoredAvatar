@@ -1,6 +1,8 @@
 var letterColoredAvatar = function() {
     params = null;
     baseColors = [
+                    '808080',
+                    'CBA179',
                     'e57373',
                     'f06292',
                     'ba68c8',
