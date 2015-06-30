@@ -26,9 +26,11 @@ var letterColoredAvatar = function() {
         transformTextToColor: function (string){
             _this = this;
             num = 0;
-            letters = string.split('').forEach(function(entry) {
-                num += entry.charCodeAt();
-            });
+            letters = string.split('');
+
+            for (var i = 0; i < letters.length; i++) {
+                num += letters[i].charCodeAt();
+            };
 
             num = num.toString();
             stringKey = num.substring(num.length, num.length - 2);
