@@ -19,7 +19,8 @@ var letterColoredAvatar = function() {
                     'ffd54f',
                     'ffb74d',
                     'a1887f',
-                    '90a4ae'
+                    '90a4ae',
+                    '00408d',
     ];
 
     return {
@@ -31,7 +32,6 @@ var letterColoredAvatar = function() {
             for (var i = 0; i < letters.length; i++) {
                 num += letters[i].charCodeAt();
             };
-
             num  = (num+letters.length*2).toString();
             stringKey = num.substring(num.length, num.length - 2);
 
