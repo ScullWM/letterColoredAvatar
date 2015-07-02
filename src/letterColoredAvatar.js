@@ -32,7 +32,7 @@ var letterColoredAvatar = function() {
                 num += letters[i].charCodeAt();
             };
 
-            num = num.toString();
+            num  = (num+letters.length*2).toString();
             stringKey = num.substring(num.length, num.length - 2);
 
             if (parseInt(stringKey) > baseColors.length) {
