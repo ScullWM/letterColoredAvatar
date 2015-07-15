@@ -1,0 +1,19 @@
+{
+  "name": "letterColoredAvatar",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ScullWM/letterColoredAvatar",
+  "authors": [
+    "Scullwm"
+  ],
+  "description": "Display first letter on color like Gmail do for avatar.",
+  "main": "css/knacss.css",
+  "keywords": [
+    "js", "javascript", "android", "gmail", "avatar", "color", "letter"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "README.md"
+  ]
+}
