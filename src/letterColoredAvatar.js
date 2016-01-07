@@ -28,6 +28,7 @@ var letterColoredAvatar = function() {
             _this = this;
             num = 0;
             letters = string.split('');
+            initialNbreOfLetter = letters.length;
 
             for (var i = 0; i < letters.length; i++) {
                 num += letters[i].charCodeAt();
@@ -40,7 +41,30 @@ var letterColoredAvatar = function() {
                 stringKey = stringKey.charAt(0)+stringKey.charAt(2);
             }
 
-            return baseColors[parseInt(stringKey)];
+            chosenColor = baseColors[parseInt(stringKey)];
+            formula     = '-0.' + parseInt(initialNbreOfLetter.toString().charAt(1)/3);
+
+            return _this.shade(chosenColor, parseFloat(formula));
+        },
+
+        shade: function(hex, lum) {
+
+            // validate hex string
+            hex = String(hex).replace(/[^0-9a-f]/gi, '');
+            if (hex.length < 6) {
+                hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+            }
+            lum = lum || 0;
+
+            // convert to decimal and change luminosity
+            var rgb = "", c, i;
+            for (i = 0; i < 3; i++) {
+                c = parseInt(hex.substr(i*2,2), 16);
+                c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+                rgb += ("00"+c).substr(c.length);
+            }
+
+            return rgb;
         },
 
         getColorFromString: function (string){
